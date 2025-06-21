@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Forecast Result</title></head>
+<body>
+<h1>📊 Forecast for {{ ticker }}</h1>
+<p><strong>Date Range:</strong> {{ start }} to {{ end }}</p>
+<p><strong>Selected Column:</strong> {{ column }}</p>
+<p><strong>Is Stationary:</strong> {{ is_stationary }}</p>
+<h3>Model Summary:</h3>
+<pre>{{ summary }}</pre>
+<div>{{ graph_html | safe }}</div>
+<br><br><a href="/">🔙 Go Back</a>
+</body></html>

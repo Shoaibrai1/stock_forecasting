@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Stock Forecasting App</title></head>
+<body>
+<h1>📈 Stock Forecasting</h1>
+<form method="POST" action="/forecast">
+Company: <select name="ticker" required>{% for company in companies %}<option value="{{ company }}">{{ company }}</option>{% endfor %}</select><br><br>
+Start Date: <input type="date" name="start" required><br><br>
+End Date: <input type="date" name="end" required><br><br>
+Column: <select name="column">
+<option value="Open">Open</option><option value="High">High</option><option value="Low">Low</option><option value="Close" selected>Close</option><option value="Volume">Volume</option></select><br><br>
+Forecast Days: <input type="number" name="forecast_days" value="10"><br><br>
+AR (p): <input type="number" name="p" value="2"><br><br>
+I (d): <input type="number" name="d" value="1"><br><br>
+MA (q): <input type="number" name="q" value="2"><br><br>
+Seasonal Period: <input type="number" name="seasonal_p" value="12"><br><br>
+<input type="submit" value="Forecast">
+</form>
+</body></html>
